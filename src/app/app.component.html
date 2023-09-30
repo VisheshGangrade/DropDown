@@ -1,0 +1,41 @@
+<div style="background-color: rosybrown;">
+  <div class="selectwrapper" style="padding: 350px;">
+<div class="selectcontainer" style="text-align: left ;">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Select country</mat-label>
+    <mat-select [(ngModel)]="countrySelected" (ngModelChange)="onCountrySelected($event)">
+      <mat-option *ngFor="let country of listcountry" [value]="country.id">
+        {{country.name}}
+        
+      </mat-option>
+
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>State</mat-label>
+    <mat-select [(ngModel)]="selectedState" (ngModelChange)="onStateSelected($event)" >
+      <mat-option *ngFor="let state of listState" [value]="state.id">
+        {{state.name}}
+      </mat-option>
+    </mat-select>
+   
+  
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>City</mat-label>
+    <mat-select [(ngModel)] ="selectedCity" (ngModelChange)="onCitySelected($event)">
+      <mat-option *ngFor="let city of listCity" [value]="city.id">
+        {{city.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+
+</div>
+
+  </div>
+  
